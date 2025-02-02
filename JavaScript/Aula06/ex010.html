@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Radar</h1>
+    Velocidade do carro: <p><input type=number id="vel" placeholder="Digite a velocidade do carro"> KM/h</p>
+    <input type="button" name="verificar" id="verificar" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var vel = document.getElementById('vel').value
+            if(vel > 60){
+                res.innerHTML = `<p>Sua velocidade é de: ${vel}Km/h, Você foi multado por excesso de velocidade</p>`
+            }else{
+                res.innerHTML = `<p>Sua velocidade é de: ${vel}Km/h, Você está dentro do limite de velocidade</p>`
+            }
+        }
+    </script>
+</body>
+</html>
